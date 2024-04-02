@@ -1,0 +1,43 @@
+nylotto_custom.basic_page.settings:
+  path: '/admin/content/basic_pages'
+  defaults:
+    _form: '\Drupal\nylotto_custom_json\Form\BasicPageSettings'
+    _title: 'Basic Page Settings'
+  requirements:
+    _permission: 'access administration pages'
+
+nylotto_custom.basic_page.list:
+  path: '/api/basic_page_ids'
+  defaults:
+    _controller: \Drupal\nylotto_custom_json\Controller\CustomEndpoints::getBasicPageIds
+  requirements:
+    _permission: 'access content'
+
+nylotto_custom.scratch_off.pdf:
+  path: '/api/scratch_off_pdf'
+  defaults:
+    _controller: '\Drupal\nylotto_custom_json\Controller\CustomEndpoints::getScratchoffPdf'
+  requirements:
+    _permission: 'access content'
+
+nylotto_custom.menu.list:
+  path: '/api/menu/{menu_name}'
+  defaults:
+    _controller: \Drupal\nylotto_custom_json\Controller\CustomEndpoints::getMenuTree
+  requirements:
+    _permission: 'access content'
+
+nylotto_data.scratch_off_pdf:
+  path: '/admin/content/scratch_off_pdf'
+  defaults:
+    _form: '\Drupal\nylotto_custom_json\Form\ScratchoffpdfImport'
+    _title: 'Scratch Off Pdf Report'
+  requirements:
+    _permission: 'administer site configuration'
+
+nylotto_custom.contact_form:
+  path: '/api/contact'
+  defaults:
+    _controller: '\Drupal\nylotto_custom_json\Controller\CustomEndpoints::sendMail'
+  requirements:
+    _permission: 'access content'

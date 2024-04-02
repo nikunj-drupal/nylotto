@@ -1,0 +1,19 @@
+add drawing entities:
+  title: 'Create new Drawing entities'
+
+administer drawing entities:
+  title: 'Administer Drawing entities'
+  description: 'Allow to access the administration form to configure Drawing entities.'
+  restrict access: true
+
+delete drawing entities:
+  title: 'Delete Drawing entities'
+
+edit drawing entities:
+  title: 'Edit Drawing entities'
+
+view published drawing entities:
+  title: 'View published Drawing entities'
+
+view unpublished drawing entities:
+  title: 'View unpublished Drawing entities'

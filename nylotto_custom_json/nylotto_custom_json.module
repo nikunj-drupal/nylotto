@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_mail.
+ */
+function nylotto_custom_json_mail($key, &$message, $params) {
+  if ($key == 'nylotto_contact_form') {
+
+    $options = [
+      'langcode' => $message['langcode'],
+    ];
+    $message['from'] = \Drupal::config('system.site')->get('mail');
+    $message['reply-to'] = $params['reply'];
+    $message['subject'] = $params['subject'];
+    $message['body'][] = $params['reply'] . "  " . $params['message'];
+  }
+}

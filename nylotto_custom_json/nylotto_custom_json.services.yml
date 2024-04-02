@@ -1,0 +1,107 @@
+services:
+  ny_lotto.prewarm_normalizer:
+    class: Drupal\nylotto_custom_json\PreWarmer
+  ny_lotto.normalizer.basic_page:
+    class: Drupal\nylotto_custom_json\Normalizer\BasicPage
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.retailer:
+    class: Drupal\nylotto_custom_json\Normalizer\Retailer
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.regional_reports:
+    class: Drupal\nylotto_custom_json\Normalizer\RegionalReports
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.game_category_taxonomy_term_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\GameCategory
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.where_to_watch_taxonomy_term_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\WhereToWatch
+    arguments: [ '@entity.manager', '@entity.query' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.service_center_taxonomy_term_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\ServiceCenter
+    arguments: [ '@entity.manager', '@entity.query' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.page_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\BasicPage
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.draw_game_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\DrawGame
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.alert_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\Alert
+    arguments: [ '@entity.manager' ]
+    tags:
+      - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.players_club_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\PlayersClub
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.collect_and_win_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\CollectAndWin
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.scratch_off_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\ScratchOffGame
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.second_chance_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\SecondChanceGame
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.recent_winners_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\RecentWinners
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.events_promotions_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\EventPromotions
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.subscriptions_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\Subscriptions
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.marquee_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\Marquee
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.prize_component_node_entity:
+    class: Drupal\nylotto_custom_json\Normalizer\PrizeComponent
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.drawing_data:
+    class: Drupal\nylotto_custom_json\Normalizer\DrawingDataNormalization
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.normalizer.prize_claim_center:
+    class: Drupal\nylotto_custom_json\Normalizer\PrizeClaimCenter
+    arguments: [ '@entity.manager' ]
+    tags:
+    - { name: normalizer, priority: 1 }
+  ny_lotto.views.subscriber:
+    class: Drupal\nylotto_custom_json\EventSubscriber\ViewsResponseHeader
+    tags:
+      - {name: event_subscriber}

@@ -1,0 +1,9 @@
+name: New York Lotto Custom Json
+type: module
+description: Provides customizations for the output from json api.
+core: 8.x
+package: New York Lotto
+dependencies:
+  - drupal:rest
+  - drupal:system (>=8.2.0)
+  - pathologic

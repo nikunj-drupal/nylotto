@@ -1,0 +1,21 @@
+# Drawing routing definition
+drawing.settings_tab:
+  route_name: drawing.settings
+  title: 'Settings'
+  base_route: drawing.settings
+
+entity.drawing.canonical:
+  route_name: entity.drawing.canonical
+  base_route: entity.drawing.canonical
+  title: 'View'
+
+entity.drawing.edit_form:
+  route_name: entity.drawing.edit_form
+  base_route: entity.drawing.canonical
+  title: 'Edit'
+
+entity.drawing.delete_form:
+  route_name:  entity.drawing.delete_form
+  base_route:  entity.drawing.canonical
+  title: Delete
+  weight: 10

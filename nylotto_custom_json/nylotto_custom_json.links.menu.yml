@@ -1,0 +1,12 @@
+nylotto_custom.basic_page.settings:
+  title: 'Basic Page Settings'
+  route_name: nylotto_custom.basic_page.settings
+  description: 'List configuration for basic pages.'
+  parent: system.admin_content
+  weight: 99
+
+nylotto_custom.scratch_off_pdf:
+  title: Scratch Off Pdf Report
+  route_name: nylotto_data.scratch_off_pdf
+  parent: system.admin_content
+  description: 'Allows importing scratch off pdf report.'
